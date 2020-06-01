@@ -1,8 +1,8 @@
-# Vim 自动弹窗
+# Vim 补全自动弹窗
 
 这是一个给类似`YouCompleteMe` 浏览 `buffer`, `dictionary` , `tags` 提供服务的简短的脚本。
 
-## 这是干嘛用的 ?
+## 作用
 
 语义补全是很好的，但有时当你正在费劲的敲一段没有 LSP 支持的代码, 或者你正在一个临时系统上工作。
 你不会想把时间浪费在设置笨重的补全引擎、设置后端服务器上。
@@ -33,7 +33,7 @@
 ```VimL
 Plug 'skywind3000/vim-auto-popmenu'
 
-" enable this plugin for filetypes, '*' for all files.
+" 设置支持的文件类型, '*' 设置全部.
 let g:apc_enable_ft = {'text':1, 'markdown':1, 'php':1}
 
 " source for dictionary, current or other loaded buffers, see ':help cpt'
@@ -46,13 +46,13 @@ set completeopt=menu,menuone,noselect
 set shortmess+=c
 ```
 
-And perhaps a dictionary database plugin for many languages:
+还可以添加字典库:
 
 ```
 Plug 'skywind3000/vim-dict'
 ```
 
-Then you go.
+完成！
 
 ## 命令
 
